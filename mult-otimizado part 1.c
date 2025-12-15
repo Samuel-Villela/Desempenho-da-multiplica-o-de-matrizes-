@@ -412,8 +412,6 @@ void matrix_multi(long long **p_values,
         /* Start counting just before computation */
         assert(PAPI_start(EventSet) == PAPI_OK);
 
-        /* Outer blocking loops. Parallelize the outermost blocking loop (jj) across threads.
-           We use schedule(static) to give each thread roughly equal blocks. */
         #pragma omp for schedule(static)
         for (uint32_t jj = 0; jj < M; jj += BS) {
             uint32_t jmax = (jj + BS > M) ? M : (jj + BS);
@@ -462,10 +460,6 @@ void matrix_multi(long long **p_values,
     /* free BT */
     free(BT);
 
-    /* Keep global PAPI shutdown if you used PAPI_library_init elsewhere.
-       In your previous code you called PAPI_shutdown() at function end;
-       calling it here will shutdown PAPI globally. If you have other PAPI usage elsewhere,
-       you may want to remove this line. */
     PAPI_shutdown();
 }
 
@@ -620,3 +614,4 @@ void help(void){
     
     exit(EXIT_FAILURE);
 }
+
