@@ -46,18 +46,20 @@ Os testes foram realizados com matrizes quadradas de diferentes tamanhos, inclui
 
 ---
 
-## 👤 Autor
-
-- Samuel Villela
-- Estudante de Ciência da Computação
-- Interesse em otimização, paralelismo e análise de desempenho
-
----
-
 ## ▶️ Como Compilar
 Certifique-se de ter o **GCC**, **OpenMP** e **PAPI** instalados.
 
 Exemplo de compilação:
-```bash
+
 gcc -fopenmp main.c matrix.c -lpapi -o matrix_mult
+
+---
+
+## 👤 Autor
+
+- Samuel Villela
+- Colaboradores: Alexandre Blandino e Murilo Caetano
+- Estudantes de Ciência da Computação
+- Interesse em otimização, paralelismo e análise de desempenho
+
 
