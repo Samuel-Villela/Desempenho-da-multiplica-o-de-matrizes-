@@ -42,15 +42,15 @@ Para evitar ruído e imprecisão nos resultados, foram selecionadas métricas es
 Os testes foram realizados com matrizes quadradas de diferentes tamanhos, incluindo:
 - 1000 x 1000
 - 2000 x 2000
-- Até 5000 x 5000
+- Até 4000 x 4000
 
 ---
 
 ## 👤 Autor
 
-Samuel Villela
-Estudante de Ciência da Computação
-Interesse em otimização, paralelismo e análise de desempenho
+- Samuel Villela
+- Estudante de Ciência da Computação
+- Interesse em otimização, paralelismo e análise de desempenho
 
 ---
 
